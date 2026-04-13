@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PandaaGamerzz — Epic gaming videos, funny moments & YouTube Shorts!" />
+  <meta property="og:title" content="PandaaGamerzz 🐼 Gaming Channel" />
+  <meta property="og:description" content="Watch epic gaming videos, funny clips and YouTube Shorts!" />
+  <title>PandaaGamerzz 🐼 | Gaming Channel</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════
+       PRELOADER
+  ══════════════════════════════════ -->
+  <div id="preloader">
+    <div class="pre-content">
+      <div class="pre-logo">🐼</div>
+      <div class="pre-name">PandaaGamerzz</div>
+      <div class="pre-tagline">Loading Epic Content...</div>
+      <div class="pre-bar-wrap">
+        <div class="pre-bar" id="preBar"></div>
+      </div>
+      <div class="pre-pct" id="prePct">0%</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       CUSTOM CURSOR
+  ══════════════════════════════════ -->
+  <div class="cursor-dot"  id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ══════════════════════════════════
+       PARTICLE CANVAS
+  ══════════════════════════════════ -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ══════════════════════════════════
+       SCROLL PROGRESS BAR
+  ══════════════════════════════════ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ══════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <a href="#home" class="nav-logo">
+        <span class="logo-emoji">🐼</span>
+        <span class="logo-text">Pandaa<span class="logo-accent">Gamerzz</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"   class="nav-link active">Home</a></li>
+        <li><a href="#about"  class="nav-link">About</a></li>
+        <li><a href="#stats"  class="nav-link">Stats</a></li>
+        <li><a href="#videos" class="nav-link">Videos</a></li>
+        <li><a href="#shorts" class="nav-link">Shorts</a></li>
+        <li><a href="#social" class="nav-link">Social</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="https://youtube.com/@PandaaGamerzz?sub_confirmation=1"
+           target="_blank" class="nav-sub-btn">
+          <i class="fab fa-youtube"></i> Subscribe
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════
+       MOBILE MENU
+  ══════════════════════════════════ -->
+  <div class="mob-overlay" id="mobOverlay"></div>
+  <div class="mob-menu"    id="mobMenu">
+    <div class="mob-head">
+      <span class="mob-logo">🐼 PandaaGamerzz</span>
+      <button class="mob-close" id="mobClose"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="mob-links">
+      <li><a href="#home"   class="mob-link"><i class="fas fa-home"></i>   Home</a></li>
+      <li><a href="#about"  class="mob-link"><i class="fas fa-user"></i>   About</a></li>
+      <li><a href="#stats"  class="mob-link"><i class="fas fa-chart-bar"></i> Stats</a></li>
+      <li><a href="#videos" class="mob-link"><i class="fas fa-video"></i>  Videos</a></li>
+      <li><a href="#shorts" class="mob-link"><i class="fas fa-bolt"></i>   Shorts</a></li>
+      <li><a href="#social" class="mob-link"><i class="fas fa-globe"></i>  Social</a></li>
+    </ul>
+    <a href="https://youtube.com/@PandaaGamerzz?sub_confirmation=1"
+       target="_blank" class="mob-sub-btn">
+      <i class="fab fa-youtube"></i> Subscribe Now — It's Free!
+    </a>
+  </div>
+
+  <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+
+      <!-- Left -->
+      <div class="hero-left">
+        <div class="hero-badge pulse-badge">
+          <span class="live-dot"></span> YouTube Creator
+        </div>
+
+        <h1 class="hero-title">
+          <span class="glitch" data-text="PandaaGamerzz">PandaaGamerzz</span>
+        </h1>
+
+        <div class="hero-typed-wrap">
+          Bringing you
+          <span class="typed-word" id="typedWord"></span>
+          <span class="typed-cur">|</span>
+        </div>
+
+        <p class="hero-desc">
+          🐼 Welcome to my gaming channel! Epic gameplay, hilarious moments,
+          and awesome shorts — all in one place. Join the <strong>Panda Army</strong>!
+        </p>
+
+        <div class="hero-btns">
+          <a href="https://youtube.com/@PandaaGamerzz?sub_confirmation=1"
+             target="_blank" class="btn-primary">
+            <i class="fab fa-youtube"></i> Subscribe Now
+          </a>
+          <a href="#videos" class="btn-outline">
+            <i class="fas fa-play"></i> Watch Videos
+          </a>
+        </div>
+
+        <div class="hero-pills">
+          <span class="pill">🎮 Gaming</span>
+          <span class="pill">⚡ Shorts</span>
+          <span class="pill">🔥 Epic Clips</span>
+          <span class="pill">😂 Funny Moments</span>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="hero-right">
+        <div class="avatar-scene">
+          <div class="avatar-ring r1"></div>
+          <div class="avatar-ring r2"></div>
+          <div class="avatar-ring r3"></div>
+          <div class="avatar-core">🐼</div>
+          <div class="avatar-badge ab1">🎮</div>
+          <div class="avatar-badge ab2">🔥</div>
+          <div class="avatar-badge ab3">⭐</div>
+          <div class="avatar-badge ab4">💎</div>
+          <div class="orbit-dot od1"></div>
+          <div class="orbit-dot od2"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       ABOUT
+  ══════════════════════════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+
+      <div class="sec-head reveal">
+        <span class="sec-tag">Who Am I?</span>
+        <h2 class="sec-title">About <span class="grad">PandaaGamerzz</span> 🐼</h2>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-avatar-col reveal">
+          <div class="about-av-wrap">
+            <div class="about-av-glow"></div>
+            <div class="about-av">🐼</div>
+            <div class="about-av-name">PandaaGamerzz</div>
+            <div class="about-av-role">Gaming Content Creator</div>
+          </div>
+          <div class="about-tags">
+            <span>🎮 Gamer</span>
+            <span>📹 Creator</span>
+            <span>🐼 Panda Fan</span>
+            <span>⚡ Shorts</span>
+            <span>🔥 Epic Content</span>
+            <span>😂 Funny Clips</span>
+          </div>
+        </div>
+
+        <div class="about-text-col reveal">
+          <h3>Hey, I'm <span class="grad">PandaaGamerzz!</span> 👋</h3>
+          <p>Welcome to my gaming universe! I'm a passionate gamer and content creator who loves sharing epic gameplay, hilarious fails, and jaw-dropping moments with the world.</p>
+          <p>My mission is simple — make you laugh, amazed, and entertained every single video. Whether it's clutch plays, funny fails, or crazy moments — I've got you covered!</p>
+          <p>Join the <strong>Panda Army</strong> today and let's build an epic gaming community together! 🐼🔥</p>
+
+          <div class="about-features">
+            <div class="af-row">
+              <div class="af-icon" style="--c:#7c3aed"><i class="fas fa-gamepad"></i></div>
+              <div>
+                <strong>Epic Gaming Content</strong>
+                <span>Regular uploads with the best gameplay moments</span>
+              </div>
+            </div>
+            <div class="af-row">
+              <div class="af-icon" style="--c:#06b6d4"><i class="fas fa-bolt"></i></div>
+              <div>
+                <strong>YouTube Shorts</strong>
+                <span>Quick clips for your daily entertainment dose</span>
+              </div>
+            </div>
+            <div class="af-row">
+              <div class="af-icon" style="--c:#f59e0b"><i class="fas fa-users"></i></div>
+              <div>
+                <strong>Panda Army Community</strong>
+                <span>A growing family of passionate gamers</span>
+              </div>
+            </div>
+            <div class="af-row">
+              <div class="af-icon" style="--c:#ec4899"><i class="fas fa-heart"></i></div>
+              <div>
+                <strong>100% Authentic</strong>
+                <span>Real reactions, real gameplay, real fun!</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://youtube.com/@PandaaGamerzz" target="_blank" class="btn-primary">
+            <i class="fab fa-youtube"></i> Visit My Channel
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       STATS
+  ══════════════════════════════════ -->
+  <section id="stats" class="stats-section">
+    <div class="container">
+
+      <div class="sec-head reveal">
+        <span class="sec-tag">Numbers</span>
+        <h2 class="sec-title">Channel <span class="grad">Stats</span> 📊</h2>
+      </div>
+
+      <div class="stats-grid">
+
+        <div class="stat-card reveal" style="--sc:#7c3aed">
+          <div class="stat-icon-wrap">
+            <i class="fab fa-youtube"></i>
+          </div>
+          <div class="stat-num counter" data-target="1000" data-suffix="+">0</div>
+          <div class="stat-lbl">Subscribers</div>
+          <div class="stat-prog"><div class="stat-fill" style="width:45%"></div></div>
+          <div class="stat-card-glow"></div>
+        </div>
+
+        <div class="stat-card reveal" style="--sc:#06b6d4">
+          <div class="stat-icon-wrap">
+            <i class="fas fa-video"></i>
+          </div>
+          <div class="stat-num counter" data-target="4" data-suffix="">0</div>
+          <div class="stat-lbl">Videos</div>
+          <div class="stat-prog"><div class="stat-fill" style="width:20%"></div></div>
+          <div class="stat-card-glow"></div>
+        </div>
+
+        <div class="stat-card reveal" style="--sc:#f59e0b">
+          <div class="stat-icon-wrap">
+            <i class="fas fa-eye"></i>
+          </div>
+          <div class="stat-num counter" data-target="5000" data-suffix="+">0</div>
+          <div class="stat-lbl">Total Views</div>
+          <div class="stat-prog"><div class="stat-fill" style="width:60%"></div></div>
+          <div class="stat-card-glow"></div>
+        </div>
+
+        <div class="stat-card reveal" style="--sc:#ec4899">
+          <div class="stat-icon-wrap">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <div class="stat-num counter" data-target="1" data-suffix="">0</div>
+          <div class="stat-lbl">Shorts</div>
+          <div class="stat-prog"><div class="stat-fill" style="width:10%"></div></div>
+          <div class="stat-card-glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       VIDEOS
+  ══════════════════════════════════ -->
+  <section id="videos" class="section">
+    <div class="container">
+
+      <div class="sec-head reveal">
+        <span class="sec-tag">Content</span>
+        <h2 class="sec-title">Latest <span class="grad">Videos</span> 🎬</h2>
+        <p class="sec-sub">Fresh content dropped regularly — never miss an upload!</p>
+      </div>
+
+      <!-- ── Featured Video ── -->
+      <div class="feat-vid reveal">
+        <div class="fv-embed">
+          <iframe
+            src="https://www.youtube.com/embed/tN71ay5wqpQ?rel=0&color=white"
+            title="Latest Video — PandaaGamerzz"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write;
+                   encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          <div class="fv-latest-tag"><i class="fas fa-star"></i> Latest Upload</div>
+        </div>
+        <div class="fv-details">
+          <div class="fv-chips">
+            <span class="chip chip-star">⭐ Featured</span>
+            <span class="chip chip-new">🆕 New</span>
+          </div>
+          <h3>My Latest Video! 🎮</h3>
+          <p>Just dropped a brand new gaming video! Grab a snack, get comfy, and enjoy the show. Don't forget to like, comment, and subscribe to the Panda Army! 🐼🔥</p>
+          <div class="fv-meta">
+            <span><i class="fas fa-fire"></i> Trending</span>
+            <span><i class="fas fa-heart"></i> Drop a Like!</span>
+            <span><i class="fas fa-comment"></i> Comment!</span>
+          </div>
+          <div class="fv-btns">
+            <a href="https://youtu.be/tN71ay5wqpQ" target="_blank" class="btn-primary sm">
+              <i class="fab fa-youtube"></i> Watch on YouTube
+            </a>
+            <a href="https://youtube.com/@PandaaGamerzz?sub_confirmation=1" target="_blank" class="btn-outline sm">
+              <i class="fas fa-bell"></i> Subscribe
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Video Grid ── -->
+      <div class="vid-grid">
+
+        <div class="vid-card reveal" onclick="openModal('tN71ay5wqpQ', false)">
+          <div class="vc-thumb">
+            <img src="https://img.youtube.com/vi/tN71ay5wqpQ/maxresdefault.jpg"
+                 alt="Latest Video"
+                 onerror="this.src='https://img.youtube.com/vi/tN71ay5wqpQ/hqdefault.jpg'">
+            <div class="vc-overlay"></div>
+            <div class="vc-play"><i class="fas fa-play"></i></div>
+            <div class="vc-badge">🔥 Latest</div>
+          </div>
+          <div class="vc-body">
+            <h4>Latest Gaming Video 🐼</h4>
+            <p>My newest upload — packed with epic gaming action!</p>
+            <div class="vc-foot">
+              <span><i class="fas fa-clock"></i> Most Recent</span>
+              <span class="vc-watch">▶ Watch</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="vid-card reveal" onclick="openModal('OEF7PSvu_Po', false)">
+          <div class="vc-thumb">
+            <img src="https://img.youtube.com/vi/OEF7PSvu_Po/maxresdefault.jpg"
+                 alt="Video 2"
+                 onerror="this.src='https://img.youtube.com/vi/OEF7PSvu_Po/hqdefault.jpg'">
+            <div class="vc-overlay"></div>
+            <div class="vc-play"><i class="fas fa-play"></i></div>
+            <div class="vc-badge">🎮 Gaming</div>
+          </div>
+          <div class="vc-body">
+            <h4>Epic Gaming Moments 🎯</h4>
+            <p>You definitely don't want to miss this one!</p>
+            <div class="vc-foot">
+              <span><i class="fas fa-clock"></i> Recent</span>
+              <span class="vc-watch">▶ Watch</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="vid-card reveal" onclick="openModal('TH6D9SJUOt8', false)">
+          <div class="vc-thumb">
+            <img src="https://img.youtube.com/vi/TH6D9SJUOt8/maxresdefault.jpg"
+                 alt="Video 3"
+                 onerror="this.src='https://img.youtube.com/vi/TH6D9SJUOt8/hqdefault.jpg'">
+            <div class="vc-overlay"></div>
+            <div class="vc-play"><i class="fas fa-play"></i></div>
+            <div class="vc-badge">⭐ Fan Fav</div>
+          </div>
+          <div class="vc-body">
+            <h4>Must Watch Video 🔥</h4>
+            <p>Another banger for the Panda Army — go watch now!</p>
+            <div class="vc-foot">
+              <span><i class="fas fa-clock"></i> Recent</span>
+              <span class="vc-watch">▶ Watch</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="vid-card vid-more reveal">
+          <div class="vm-inner">
+            <div class="vm-emoji">🐼</div>
+            <h4>More Videos!</h4>
+            <p>All videos are on my YouTube channel!</p>
+            <a href="https://youtube.com/@PandaaGamerzz/videos"
+               target="_blank" class="btn-primary sm">
+              <i class="fab fa-youtube"></i> View All
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Subscribe Banner ── -->
+      <div class="sub-banner reveal">
+        <div class="sb-left">
+          <span class="sb-bell">🔔</span>
+          <div>
+            <strong>Never Miss a Video!</strong>
+            <span>Subscribe & hit the bell — every upload, every time!</span>
+          </div>
+        </div>
+        <a href="https://youtube.com/@PandaaGamerzz?sub_confirmation=1"
+           target="_blank" class="btn-yt-red">
+          <i class="fab fa-youtube"></i> Subscribe — It's Free!
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       SHORTS
+  ══════════════════════════════════ -->
+  <section id="shorts" class="section shorts-section">
+    <div class="container">
+
+      <div class="sec-head reveal">
+        <span class="sec-tag">Quick Clips</span>
+        <h2 class="sec-title">YouTube <span class="grad">Shorts</span> ⚡</h2>
+        <p class="sec-sub">Quick, fun and entertaining clips — perfect for any mood!</p>
+      </div>
+
+      <div class="shorts-layout">
+
+        <!-- Short Card -->
+        <div class="short-card-wrap reveal" onclick="openModal('6KFoU5PL24g', true)">
+          <div class="short-card">
+            <div class="short-thumb">
+              <img src="https://img.youtube.com/vi/6KFoU5PL24g/maxresdefault.jpg"
+                   alt="YouTube Short"
+                   onerror="this.src='https://img.youtube.com/vi/6KFoU5PL24g/hqdefault.jpg'">
+              <div class="short-overlay"></div>
+              <div class="short-play"><i class="fas fa-play"></i></div>
+              <div class="short-yt-badge"><i class="fab fa-youtube"></i> SHORT</div>
+            </div>
+            <div class="short-body">
+              <h4>Check Out My Short! ⚡</h4>
+              <p>Quick and hilarious clip from PandaaGamerzz</p>
+              <div class="short-btns" onclick="event.stopPropagation()">
+                <button class="btn-primary sm"
+                        onclick="openModal('6KFoU5PL24g', true)">
+                  <i class="fas fa-play"></i> Watch
+                </button>
+                <a href="https://youtube.com/shorts/6KFoU5PL24g"
+                   target="_blank" class="btn-outline sm">
+                  <i class="fab fa-youtube"></i> YouTube
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shorts Info -->
+        <div class="shorts-info reveal">
+          <div class="si-box">
+            <div class="si-top">
+              <span class="si-emoji">⚡</span>
+              <h3>YouTube <span class="grad">Shorts</span></h3>
+            </div>
+            <p>I create quick, punchy Shorts to keep you entertained every single day! Short video, big energy — always keeping it real and fun!</p>
+            <ul class="si-list">
+              <li><i class="fas fa-check-circle"></i> Under 60 seconds of pure content</li>
+              <li><i class="fas fa-check-circle"></i> Action-packed gaming clips</li>
+              <li><i class="fas fa-check-circle"></i> Hilarious funny moments</li>
+              <li><i class="fas fa-check-circle"></i> Daily entertainment boost</li>
+            </ul>
+            <div class="si-btns">
+              <a href="https://youtube.com/@PandaaGamerzz/shorts"
+                 target="_blank" class="btn-primary">
+                <i class="fab fa-youtube"></i> See All Shorts
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       SOCIAL MEDIA
+  ══════════════════════════════════ -->
+  <section id="social" class="section">
+    <div class="container">
+
+      <div class="sec-head reveal">
+        <span class="sec-tag">Connect</span>
+        <h2 class="sec-title">Follow <span class="grad">PandaaGamerzz</span> 🌐</h2>
+        <p class="sec-sub">Connect with me on all platforms and join the community!</p>
+      </div>
+
+      <div class="social-grid">
+
+        <a href="https://youtube.com/@PandaaGamerzz"
+           target="_blank" class="soc-card reveal" style="--sc:#ff0000">
+          <div class="soc-icon"><i class="fab fa-youtube"></i></div>
+          <div class="soc-info">
+            <strong>YouTube</strong>
+            <span>@PandaaGamerzz</span>
+          </div>
+          <i class="fas fa-arrow-right soc-arrow"></i>
+          <div class="soc-glow"></div>
+        </a>
+
+        <a href="#" target="_blank" class="soc-card reveal" style="--sc:#e1306c">
+          <div class="soc-icon"><i class="fab fa-instagram"></i></div>
+          <div class="soc-info">
+            <strong>Instagram</strong>
+            <span>Coming Soon! 🚀</span>
+          </div>
+          <i class="fas fa-arrow-right soc-arrow"></i>
+          <div class="soc-glow"></div>
+        </a>
+
+        <a href="#" target="_blank" class="soc-card reveal" style="--sc:#000000">
+          <div class="soc-icon"><i class="fab fa-tiktok"></i></div>
+          <div class="soc-info">
+            <strong>TikTok</strong>
+            <span>Coming Soon! 🚀</span>
+          </div>
+          <i class="fas fa-arrow-right soc-arrow"></i>
+          <div class="soc-glow"></div>
+        </a>
+
+        <a href="#" target="_blank" class="soc-card reveal" style="--sc:#5865f2">
+          <div class="soc-icon"><i class="fab fa-discord"></i></div>
+          <div class="soc-info">
+            <strong>Discord</strong>
+            <span>Join the Server! 🎮</span>
+          </div>
+          <i class="fas fa-arrow-right soc-arrow"></i>
+          <div class="soc-glow"></div>
+        </a>
+
+        <a href="#" target="_blank" class="soc-card reveal" style="--sc:#1da1f2">
+          <div class="soc-icon"><i class="fab fa-twitter"></i></div>
+          <div class="soc-info">
+            <strong>Twitter / X</strong>
+            <span>Coming Soon! 🚀</span>
+          </div>
+          <i class="fas fa-arrow-right soc-arrow"></i>
+          <div class="soc-glow"></div>
+        </a>
+
+        <a href="#" target="_blank" class="soc-card reveal" style="--sc:#6441a5">
+          <div class="soc-icon"><i class="fab fa-twitch"></i></div>
+          <div class="soc-info">
+            <strong>Twitch</strong>
+            <span>Coming Soon! 🚀</span>
+          </div>
+          <i class="fas fa-arrow-right soc-arrow"></i>
+          <div class="soc-glow"></div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       BIG CTA
+  ══════════════════════════════════ -->
+  <section class="big-cta">
+    <div class="container">
+      <div class="bcta reveal">
+        <div class="bcta-bg-glow"></div>
+        <span class="bcta-emoji">🐼</span>
+        <h2>Join the <span class="grad">Panda Army!</span></h2>
+        <p>Subscribe to PandaaGamerzz and become part of an amazing gaming family. New videos every week — don't miss out!</p>
+        <div class="bcta-btns">
+          <a href="https://youtube.com/@PandaaGamerzz?sub_confirmation=1"
+             target="_blank" class="btn-primary lg">
+            <i class="fab fa-youtube"></i> Subscribe — It's Free!
+          </a>
+          <a href="https://youtube.com/@PandaaGamerzz/videos"
+             target="_blank" class="btn-outline lg">
+            <i class="fas fa-play"></i> Watch Videos
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <div class="footer-logo">🐼 PandaaGamerzz</div>
+          <p>Gaming content creator bringing you epic videos, funny moments, and awesome shorts. Join the Panda Army today!</p>
+          <div class="footer-socials">
+            <a href="https://youtube.com/@PandaaGamerzz" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+            <a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">🏠 Home</a></li>
+            <li><a href="#about">🐼 About</a></li>
+            <li><a href="#stats">📊 Stats</a></li>
+            <li><a href="#videos">🎬 Videos</a></li>
+            <li><a href="#shorts">⚡ Shorts</a></li>
+            <li><a href="#social">🌐 Social</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>YouTube</h4>
+          <ul>
+            <li><a href="https://youtube.com/@PandaaGamerzz" target="_blank">📺 Channel</a></li>
+            <li><a href="https://youtube.com/@PandaaGamerzz/videos" target="_blank">🎬 All Videos</a></li>
+            <li><a href="https://youtube.com/@PandaaGamerzz/shorts" target="_blank">⚡ Shorts</a></li>
+            <li><a href="https://youtube.com/@PandaaGamerzz?sub_confirmation=1" target="_blank">🔔 Subscribe</a></li>
+            <li><a href="https://youtu.be/tN71ay5wqpQ" target="_blank">🔥 Latest Video</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>🔔 Stay Updated</h4>
+          <p class="footer-note">Never miss a new upload from PandaaGamerzz!</p>
+          <a href="https://youtube.com/@PandaaGamerzz?sub_confirmation=1"
+             target="_blank" class="btn-yt-red footer-sub-btn">
+            <i class="fab fa-youtube"></i> Subscribe on YouTube
+          </a>
+          <p class="footer-note" style="margin-top:1rem;">New videos uploaded regularly! 🎮</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2025 <strong>PandaaGamerzz</strong>. All Rights Reserved. Made with ❤️ & 🐼</span>
+        <span>🎮 Keep Gaming, Panda Army!</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════
+       VIDEO MODAL
+  ══════════════════════════════════ -->
+  <div class="modal-bd" id="modalBd" onclick="closeModal()">
+    <div class="modal-box" id="modalBox" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-frame" id="modalFrame"></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       BACK TO TOP
+  ══════════════════════════════════ -->
+  <button class="back-top" id="backTop" onclick="scrollTop()" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ══════════════════════════════════
+       TOAST NOTIFICATION
+  ══════════════════════════════════ -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
