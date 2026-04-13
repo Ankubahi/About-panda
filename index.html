@@ -254,61 +254,199 @@
   </section>
 
   <!-- ══════════════════════════════════
-       STATS
-  ══════════════════════════════════ -->
-  <section id="stats" class="stats-section">
-    <div class="container">
+     STATS SECTION
+══════════════════════════════════ -->
+<section id="stats" class="stats-section">
+  <div class="container">
 
-      <div class="sec-head reveal">
-        <span class="sec-tag">Numbers</span>
-        <h2 class="sec-title">Channel <span class="grad">Stats</span> 📊</h2>
-      </div>
+    <div class="sec-head reveal">
+      <span class="sec-tag">By The Numbers</span>
+      <h2 class="sec-title">Channel <span class="grad">Stats</span> 📊</h2>
+      <p class="sec-sub">Real numbers. Real growth. Real Panda Army! 🐼</p>
+    </div>
 
-      <div class="stats-grid">
+    <!-- ══ MAIN STATS ══ -->
+    <div class="stats-grid reveal-grid">
 
-        <div class="stat-card reveal" style="--sc:#7c3aed">
+      <!-- Subscribers -->
+      <div class="stat-card reveal" style="--sc:#7c3aed">
+        <div class="stat-top">
           <div class="stat-icon-wrap">
             <i class="fab fa-youtube"></i>
           </div>
-          <div class="stat-num counter" data-target="1200" data-suffix="+">0</div>
-          <div class="stat-lbl">Subscribers</div>
-          <div class="stat-prog"><div class="stat-fill" style="width:45%"></div></div>
-          <div class="stat-card-glow"></div>
-        </div>
-
-        <div class="stat-card reveal" style="--sc:#06b6d4">
-          <div class="stat-icon-wrap">
-            <i class="fas fa-video"></i>
+          <div class="stat-trend up">
+            <i class="fas fa-arrow-trend-up"></i> Growing
           </div>
-          <div class="stat-num counter" data-target="14" data-suffix="">0</div>
-          <div class="stat-lbl">Videos</div>
-          <div class="stat-prog"><div class="stat-fill" style="width:20%"></div></div>
-          <div class="stat-card-glow"></div>
         </div>
+        <div class="stat-num counter" data-target="1200" data-suffix="+">0</div>
+        <div class="stat-lbl">Subscribers</div>
+        <div class="stat-desc">Panda Army members 🐼</div>
+        <div class="stat-prog">
+          <div class="stat-fill" style="--fw:55%"></div>
+        </div>
+        <div class="stat-card-glow"></div>
+      </div>
 
-        <div class="stat-card reveal" style="--sc:#f59e0b">
+      <!-- Total Views -->
+      <div class="stat-card reveal" style="--sc:#f59e0b">
+        <div class="stat-top">
           <div class="stat-icon-wrap">
             <i class="fas fa-eye"></i>
           </div>
-          <div class="stat-num counter" data-target="268100" data-suffix="+">0</div>
-          <div class="stat-lbl">Total Views</div>
-          <div class="stat-prog"><div class="stat-fill" style="width:60%"></div></div>
-          <div class="stat-card-glow"></div>
+          <div class="stat-trend up">
+            <i class="fas fa-fire"></i> Hot
+          </div>
         </div>
+        <div class="stat-num counter" data-target="268" data-suffix=".1K">0</div>
+        <div class="stat-lbl">Total Views</div>
+        <div class="stat-desc">And counting every day! 🔥</div>
+        <div class="stat-prog">
+          <div class="stat-fill" style="--fw:85%"></div>
+        </div>
+        <div class="stat-card-glow"></div>
+      </div>
 
-        <div class="stat-card reveal" style="--sc:#ec4899">
+      <!-- Videos -->
+      <div class="stat-card reveal" style="--sc:#06b6d4">
+        <div class="stat-top">
+          <div class="stat-icon-wrap">
+            <i class="fas fa-clapperboard"></i>
+          </div>
+          <div class="stat-trend up">
+            <i class="fas fa-plus"></i> More Coming
+          </div>
+        </div>
+        <div class="stat-num counter" data-target="14" data-suffix="">0</div>
+        <div class="stat-lbl">Videos</div>
+        <div class="stat-desc">Full gaming videos uploaded 🎬</div>
+        <div class="stat-prog">
+          <div class="stat-fill" style="--fw:30%"></div>
+        </div>
+        <div class="stat-card-glow"></div>
+      </div>
+
+      <!-- Shorts -->
+      <div class="stat-card reveal" style="--sc:#ec4899">
+        <div class="stat-top">
           <div class="stat-icon-wrap">
             <i class="fas fa-bolt"></i>
           </div>
-          <div class="stat-num counter" data-target="84" data-suffix="">0</div>
-          <div class="stat-lbl">Shorts</div>
-          <div class="stat-prog"><div class="stat-fill" style="width:10%"></div></div>
-          <div class="stat-card-glow"></div>
+          <div class="stat-trend up">
+            <i class="fas fa-arrow-trend-up"></i> Active
+          </div>
         </div>
+        <div class="stat-num counter" data-target="84" data-suffix="">0</div>
+        <div class="stat-lbl">YouTube Shorts</div>
+        <div class="stat-desc">Quick clips for you ⚡</div>
+        <div class="stat-prog">
+          <div class="stat-fill" style="--fw:75%"></div>
+        </div>
+        <div class="stat-card-glow"></div>
+      </div>
 
+    </div>
+
+    <!-- ══ SECONDARY STATS ROW ══ -->
+    <div class="mini-stats reveal">
+
+      <div class="mini-stat">
+        <span class="mini-icon" style="--mc:#7c3aed">
+          <i class="fas fa-users"></i>
+        </span>
+        <div class="mini-info">
+          <strong>Panda Army</strong>
+          <span>1,200+ strong members</span>
+        </div>
+      </div>
+
+      <div class="mini-divider"></div>
+
+      <div class="mini-stat">
+        <span class="mini-icon" style="--mc:#f59e0b">
+          <i class="fas fa-film"></i>
+        </span>
+        <div class="mini-info">
+          <strong>98 Uploads Total</strong>
+          <span>14 videos + 84 shorts</span>
+        </div>
+      </div>
+
+      <div class="mini-divider"></div>
+
+      <div class="mini-stat">
+        <span class="mini-icon" style="--mc:#06b6d4">
+          <i class="fas fa-chart-line"></i>
+        </span>
+        <div class="mini-info">
+          <strong>268.1K+ Views</strong>
+          <span>Across all content</span>
+        </div>
+      </div>
+
+      <div class="mini-divider"></div>
+
+      <div class="mini-stat">
+        <span class="mini-icon" style="--mc:#ec4899">
+          <i class="fas fa-heart"></i>
+        </span>
+        <div class="mini-info">
+          <strong>Loved By All</strong>
+          <span>Growing every single day</span>
+        </div>
+      </div>
+
+      <div class="mini-divider"></div>
+
+      <div class="mini-stat">
+        <span class="mini-icon" style="--mc:#10b981">
+          <i class="fas fa-upload"></i>
+        </span>
+        <div class="mini-info">
+          <strong>Regular Uploads</strong>
+          <span>New content always dropping</span>
+        </div>
+      </div>
+
+      <div class="mini-divider"></div>
+
+      <div class="mini-stat">
+        <span class="mini-icon" style="--mc:#f97316">
+          <i class="fab fa-youtube"></i>
+        </span>
+        <div class="mini-info">
+          <strong>100% Free</strong>
+          <span>Subscribe — it's free!</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ══ MILESTONE BANNER ══ -->
+    <div class="milestone-banner reveal">
+      <div class="mb-glow"></div>
+      <div class="mb-left">
+        <div class="mb-icon">🏆</div>
+        <div class="mb-text">
+          <strong>268.1K Views Milestone!</strong>
+          <span>Thank you to every single member of the Panda Army 🐼❤️</span>
+        </div>
+      </div>
+      <div class="mb-right">
+        <div class="mb-next">
+          <span class="mb-next-label">Next Goal</span>
+          <span class="mb-next-val">500K Views 🎯</span>
+        </div>
+        <div class="mb-progress-wrap">
+          <div class="mb-progress-bar">
+            <div class="mb-progress-fill"></div>
+          </div>
+          <span class="mb-progress-pct">53.6%</span>
+        </div>
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
   <!-- ══════════════════════════════════
        VIDEOS
