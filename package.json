@@ -1,0 +1,15 @@
+{
+  "name": "taskflow",
+  "version": "2.0.0",
+  "description": "TaskFlow — A full-featured task management application",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "keywords": ["task", "management", "productivity"],
+  "author": "TaskFlow",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  }
+}
