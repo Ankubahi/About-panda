@@ -490,3 +490,20 @@ function startAnimations() {
 ════════════════════════════════════════════════ */
 console.log('%c🐼 PandaaGamerzz Website Loaded!', 'color:#7c3aed;font-size:1.2rem;font-weight:bold;');
 console.log('%c👉 youtube.com/@PandaaGamerzz', 'color:#06b6d4;font-size:.9rem;');
+
+/* ══ Milestone banner progress fill ══ */
+(function initMilestone() {
+  const banner = $('.milestone-banner');
+  if (!banner) return;
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        banner.classList.add('visible');
+        obs.unobserve(banner);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  obs.observe(banner);
+})();
